@@ -1,36 +1,51 @@
 <!DOCTYPE html>
+<!-- A tag 'lang="pt-BR"' é crucial para acessibilidade e SEO, informando aos navegadores e buscadores que o conteúdo da página está em português do Brasil. -->
 <html lang="pt-BR">
 <head>
+    <!-- Define o conjunto de caracteres como UTF-8, o padrão universal que suporta acentos e caracteres especiais. -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariana Werneck Pudins </title>
     
-    <!-- Tailwind CSS -->
+    <!-- 'viewport' é a tag mais importante para o design responsivo. Ela garante que a página se ajuste à largura da tela do dispositivo (celular, tablet, desktop). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- O título da página, exibido na aba do navegador e muito importante para os resultados de busca. -->
+    <title>Mariana Werneck Pudins - Cardápio Atualizado</title>
+    
+    <!-- IMPORTAÇÃO DE FERRAMENTAS EXTERNAS (CDN) -->
+
+    <!-- 1. Tailwind CSS: Framework de CSS "utility-first". Em vez de escrever CSS em um arquivo separado, aplicamos classes diretamente no HTML. Isso acelera o desenvolvimento e mantém a consistência. -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter & Playfair Display -->
+    <!-- 2. Google Fonts: Importamos as fontes que darão a identidade visual ao site. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
+    <!-- ESTILOS PERSONALIZADOS -->
     <style>
-        /* Estilos personalizados para fontes */
+        /* Mesmo usando Tailwind, podemos adicionar CSS customizado para regras mais complexas ou específicas. */
         body {
+            /* 'Inter' será a fonte padrão para o corpo do texto. É uma fonte limpa e legível. */
             font-family: 'Inter', sans-serif;
         }
         .font-display {
+            /* 'Playfair Display' será usada para títulos. É uma fonte serifada que transmite elegância e tradição. */
             font-family: 'Playfair Display', serif;
         }
     </style>
 </head>
+<!-- A classe 'bg-stone-50' define um fundo levemente acinzentado e 'text-stone-800' define a cor padrão do texto, criando um bom contraste. -->
 <body class="bg-stone-50 text-stone-800">
 
-    <!-- Cabeçalho Minimalista -->
+    <!-- CABEÇALHO (HEADER) -->
+    <!-- 'sticky top-0 z-50' faz o cabeçalho ficar fixo no topo da tela durante a rolagem. 'z-50' garante que ele fique acima de outros elementos. -->
     <header class="bg-white/90 backdrop-blur-sm border-b border-stone-200 sticky top-0 z-50">
+        <!-- 'container mx-auto' centraliza o conteúdo e limita sua largura máxima. 'px-6' adiciona padding nas laterais. 'flex justify-between items-center' organiza os itens horizontalmente com espaço entre eles e alinhados ao centro. -->
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-xl font-bold font-display text-stone-900">
                 Mariana Werneck Pudins
             </div>
+            <!-- 'hidden md:flex' esconde o menu em telas pequenas e o exibe como flex em telas médias (md) ou maiores. -->
             <nav class="hidden md:flex space-x-8 text-sm">
                 <a href="#sabores" class="text-stone-600 hover:text-stone-900 transition-colors">Sabores</a>
                 <a href="#historia" class="text-stone-600 hover:text-stone-900 transition-colors">Nossa História</a>
@@ -42,8 +57,9 @@
         </div>
     </header>
 
-    <!-- Seção Hero com Cor Sólida -->
+    <!-- CONTEÚDO PRINCIPAL (MAIN) -->
     <main>
+        <!-- SEÇÃO HERO: A primeira impressão do site. -->
         <section class="bg-amber-800 text-white">
             <div class="container mx-auto px-6 py-24 md:py-32 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold font-display leading-tight mb-4">A tradição em forma de pudim.</h1>
@@ -51,45 +67,100 @@
             </div>
         </section>
 
-        <!-- Seção de Sabores (Cardápio) -->
+        <!-- SEÇÃO DE SABORES (CARDÁPIO) - VERSÃO 2.0 -->
+        <!-- Esta seção foi completamente refeita para incluir os itens do novo cardápio. -->
         <section id="sabores" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold font-display text-stone-900 mb-2">Nossos Sabores</h2>
-                <p class="text-stone-600 mb-12 max-w-xl mx-auto">Cada pudim é uma experiência. Escolha o seu preferido.</p>
+                <h2 class="text-3xl md:text-4xl font-bold font-display text-stone-900 mb-2">Nosso Cardápio</h2>
+                <p class="text-stone-600 mb-12 max-w-xl mx-auto">Do tamanho da sua vontade: opções individuais, para compartilhar e sabores especiais.</p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Pudim Card -->
-                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden">
-                        <img src="https://placehold.co/600x400/d2a679/4a2c2a?text=Pudim+Cl%C3%A1ssico" alt="Imagem de um pudim clássico" class="w-full h-48 object-cover">
-                        <div class="p-6 text-left">
-                            <h3 class="text-xl font-bold font-display text-stone-900 mb-2">Pudim Clássico</h3>
-                            <p class="text-stone-700 mb-4 text-sm leading-relaxed">A receita tradicional, com textura aveludada e uma calda de caramelo artesanal inesquecível.</p>
-                            <span class="text-lg font-bold text-amber-900">R$ 45,00</span>
+                <!-- 'grid' cria um layout em grade. 'grid-cols-1' (padrão mobile) mostra 1 item por linha. 'md:grid-cols-2' e 'lg:grid-cols-4' ajustam para 2 e 4 colunas em telas maiores, criando a responsividade. 'gap-8' define o espaço entre os itens. -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Card de Produto 1: Mini Pudim -->
+                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x400/d2a679/4a2c2a?text=Mini+Pudim" alt="Imagem de um mini pudim tradicional" class="w-full h-40 object-cover">
+                        <div class="p-5 flex-grow flex flex-col">
+                            <h3 class="text-lg font-bold font-display text-stone-900">Mini Pudim (120ml)</h3>
+                            <p class="text-stone-700 text-sm leading-relaxed mt-1 flex-grow">A dose perfeita de felicidade. Nosso pudim tradicional em porção individual.</p>
+                            <span class="text-xl font-bold text-amber-900 mt-3">R$ 8,00</span>
                         </div>
                     </div>
-                    <!-- Pudim Card -->
-                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden">
-                        <img src="https://placehold.co/600x400/a1887f/4a2c2a?text=Pudim+de+Chocotone" alt="Imagem de um pudim de chocotone" class="w-full h-48 object-cover">
-                        <div class="p-6 text-left">
-                            <h3 class="text-xl font-bold font-display text-stone-900 mb-2">Pudim de Chocotone</h3>
-                            <p class="text-stone-700 mb-4 text-sm leading-relaxed">A magia do Natal em forma de pudim. Cremoso e com pedaços de chocotone. (Edição Limitada)</p>
-                            <span class="text-lg font-bold text-amber-900">R$ 55,00</span>
+
+                    <!-- Card de Produto 2: Chup-Chup -->
+                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x400/e6bf83/4a2c2a?text=Chup-Chup" alt="Imagem de um chup-chup gourmet de pudim" class="w-full h-40 object-cover">
+                        <div class="p-5 flex-grow flex flex-col">
+                            <h3 class="text-lg font-bold font-display text-stone-900">Chup-Chup Gourmet</h3>
+                            <p class="text-stone-700 text-sm leading-relaxed mt-1 flex-grow">A cremosidade do nosso pudim em uma versão divertida e refrescante.</p>
+                            <span class="text-xl font-bold text-amber-900 mt-3">R$ 8,00</span>
                         </div>
                     </div>
-                    <!-- Pudim Card -->
-                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden">
-                        <img src="https://placehold.co/600x400/8bc34a/4a2c2a?text=Pudim+de+Pistache" alt="Imagem de um pudim de pistache" class="w-full h-48 object-cover">
-                        <div class="p-6 text-left">
-                            <h3 class="text-xl font-bold font-display text-stone-900 mb-2">Pudim de Pistache</h3>
-                            <p class="text-stone-700 mb-4 text-sm leading-relaxed">Uma criação sofisticada, feita com pasta de pistache pura. Sabor intenso e marcante.</p>
-                            <span class="text-lg font-bold text-amber-900">R$ 65,00</span>
+
+                    <!-- Card de Produto 3: Pudim 500ml -->
+                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x400/c59d6f/4a2c2a?text=Pudim+500ml" alt="Imagem de um pudim de 500ml" class="w-full h-40 object-cover">
+                        <div class="p-5 flex-grow flex flex-col">
+                            <h3 class="text-lg font-bold font-display text-stone-900">Pudim Tradicional (500ml)</h3>
+                            <p class="text-stone-700 text-sm leading-relaxed mt-1 flex-grow">Ideal para compartilhar a dois ou para aquela sobremesa especial do dia a dia.</p>
+                            <span class="text-xl font-bold text-amber-900 mt-3">R$ 30,00</span>
+                        </div>
+                    </div>
+
+                    <!-- Card de Produto 4: Pudim 1kg -->
+                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x400/b99062/4a2c2a?text=Pudim+1kg" alt="Imagem de um pudim de 1kg" class="w-full h-40 object-cover">
+                        <div class="p-5 flex-grow flex flex-col">
+                            <h3 class="text-lg font-bold font-display text-stone-900">Pudim Tradicional (1kg)</h3>
+                            <p class="text-stone-700 text-sm leading-relaxed mt-1 flex-grow">O tamanho perfeito para a sobremesa da família no domingo. Serve até 8 pessoas.</p>
+                            <span class="text-xl font-bold text-amber-900 mt-3">R$ 55,00</span>
+                        </div>
+                    </div>
+
+                    <!-- Card de Produto 5: Pudim de Chocolate Nobre -->
+                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x400/5d4037/ffffff?text=Chocolate+Nobre" alt="Imagem de um pudim de chocolate" class="w-full h-40 object-cover">
+                        <div class="p-5 flex-grow flex flex-col">
+                            <h3 class="text-lg font-bold font-display text-stone-900">Pudim de Chocolate Nobre</h3>
+                            <p class="text-stone-700 text-sm leading-relaxed mt-1 flex-grow">Cremoso, intenso e coberto com uma irresistível calda de ganache meio amargo.</p>
+                            <span class="text-xl font-bold text-amber-900 mt-3">R$ 85,00</span>
+                        </div>
+                    </div>
+
+                    <!-- Card de Produto 6: Pudim de Chocolate Branco -->
+                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x400/fce4ec/c2185b?text=Chocolate+Branco" alt="Imagem de um pudim de chocolate branco com morango" class="w-full h-40 object-cover">
+                        <div class="p-5 flex-grow flex flex-col">
+                            <h3 class="text-lg font-bold font-display text-stone-900">Pudim de Chocolate Branco</h3>
+                            <p class="text-stone-700 text-sm leading-relaxed mt-1 flex-grow">A suavidade do chocolate branco com o toque azedinho de uma calda de morango artesanal.</p>
+                            <span class="text-xl font-bold text-amber-900 mt-3">R$ 80,00</span>
+                        </div>
+                    </div>
+
+                    <!-- Card de Produto 7: Pudim de Paçoquinha -->
+                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x400/fbc02d/4e342e?text=Pa%C3%A7oquinha" alt="Imagem de um pudim de paçoca" class="w-full h-40 object-cover">
+                        <div class="p-5 flex-grow flex flex-col">
+                            <h3 class="text-lg font-bold font-display text-stone-900">Pudim de Paçoquinha</h3>
+                            <p class="text-stone-700 text-sm leading-relaxed mt-1 flex-grow">O sabor inconfundível do amendoim em um pudim super cremoso. É puro afeto!</p>
+                            <span class="text-xl font-bold text-amber-900 mt-3">R$ 60,00</span>
+                        </div>
+                    </div>
+
+                    <!-- Card de Produto 8: Pudim de Cocada -->
+                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x400/fafafa/3e2723?text=Cocada" alt="Imagem de um pudim de cocada" class="w-full h-40 object-cover">
+                        <div class="p-5 flex-grow flex flex-col">
+                            <h3 class="text-lg font-bold font-display text-stone-900">Pudim de Cocada Cremosa</h3>
+                            <p class="text-stone-700 text-sm leading-relaxed mt-1 flex-grow">A doçura do coco em uma textura aveludada que derrete na boca. Uma viagem ao Nordeste.</p>
+                            <span class="text-xl font-bold text-amber-900 mt-3">R$ 70,00</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção Nossa História -->
+        <!-- SEÇÃO NOSSA HISTÓRIA -->
         <section id="historia" class="py-16 md:py-24 bg-stone-100">
             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
@@ -108,17 +179,15 @@
             </div>
         </section>
 
-        <!-- Seção de Depoimentos -->
+        <!-- SEÇÃO DE DEPOIMENTOS -->
         <section id="depoimentos" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold font-display text-stone-900 mb-12">O que nossos clientes dizem</h2>
                 <div class="max-w-3xl mx-auto space-y-8">
-                    <!-- Depoimento 1 -->
                     <div class="bg-stone-50 p-6 rounded-lg border border-stone-200">
                         <p class="text-stone-700 mb-3">"O melhor pudim que já comi na vida! Textura perfeita, doce na medida certa. Virou o preferido da família!"</p>
                         <p class="font-semibold text-sm text-stone-800">- Joana S.</p>
                     </div>
-                    <!-- Depoimento 2 -->
                     <div class="bg-stone-50 p-6 rounded-lg border border-stone-200">
                         <p class="text-stone-700 mb-3">"Atendimento impecável e o pudim é simplesmente divino. Encomendei para um aniversário e foi um sucesso absoluto."</p>
                         <p class="font-semibold text-sm text-stone-800">- Carlos M.</p>
@@ -128,16 +197,18 @@
         </section>
     </main>
 
-    <!-- Rodapé -->
+    <!-- RODAPÉ (FOOTER) -->
     <footer id="contato" class="bg-stone-900 text-white">
         <div class="container mx-auto px-6 py-12 text-center">
             <h3 class="text-2xl font-bold font-display mb-4">Pronto para adoçar seu dia?</h3>
             <p class="mb-8 max-w-lg mx-auto text-stone-300">Entre em contato pelo WhatsApp para fazer seu pedido ou tirar dúvidas.</p>
+            <!-- Este link do WhatsApp inclui uma mensagem pré-definida para facilitar o contato do cliente. -->
             <a href="https://api.whatsapp.com/send?phone=35998556544&text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="bg-white text-stone-900 font-bold px-8 py-3 rounded-full hover:bg-stone-200 transition-colors inline-block">
                 Chamar no WhatsApp
             </a>
             <div class="mt-10 border-t border-stone-700 pt-6">
                 <p class="text-sm text-stone-400">Mariana Werneck Pudins | Entregas em Campo Belo - MG</p>
+                <!-- O '&copy;' cria o símbolo de copyright. -->
                 <p class="text-xs text-stone-500 mt-2">&copy; 2025. Todos os direitos reservados.</p>
             </div>
         </div>
