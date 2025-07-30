@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariana Werneck Pudins </title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos personalizados para fontes */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Cabeçalho Minimalista -->
+    <header class="bg-white/90 backdrop-blur-sm border-b border-stone-200 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold font-display text-stone-900">
+                Mariana Werneck Pudins
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm">
+                <a href="#sabores" class="text-stone-600 hover:text-stone-900 transition-colors">Sabores</a>
+                <a href="#historia" class="text-stone-600 hover:text-stone-900 transition-colors">Nossa História</a>
+                <a href="#contato" class="text-stone-600 hover:text-stone-900 transition-colors">Contato</a>
+            </nav>
+            <a href="https://api.whatsapp.com/send?phone=35998556544" target="_blank" class="bg-stone-800 text-white px-5 py-2 rounded-full hover:bg-stone-900 transition-colors text-sm font-semibold">
+                Fazer Pedido
+            </a>
+        </div>
+    </header>
+
+    <!-- Seção Hero com Cor Sólida -->
+    <main>
+        <section class="bg-amber-800 text-white">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold font-display leading-tight mb-4">A tradição em forma de pudim.</h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto text-amber-100">Feito com carinho e os melhores ingredientes para adoçar seus momentos em Campo Belo.</p>
+            </div>
+        </section>
+
+        <!-- Seção de Sabores (Cardápio) -->
+        <section id="sabores" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-display text-stone-900 mb-2">Nossos Sabores</h2>
+                <p class="text-stone-600 mb-12 max-w-xl mx-auto">Cada pudim é uma experiência. Escolha o seu preferido.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Pudim Card -->
+                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden">
+                        <img src="https://placehold.co/600x400/d2a679/4a2c2a?text=Pudim+Cl%C3%A1ssico" alt="Imagem de um pudim clássico" class="w-full h-48 object-cover">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-bold font-display text-stone-900 mb-2">Pudim Clássico</h3>
+                            <p class="text-stone-700 mb-4 text-sm leading-relaxed">A receita tradicional, com textura aveludada e uma calda de caramelo artesanal inesquecível.</p>
+                            <span class="text-lg font-bold text-amber-900">R$ 45,00</span>
+                        </div>
+                    </div>
+                    <!-- Pudim Card -->
+                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden">
+                        <img src="https://placehold.co/600x400/a1887f/4a2c2a?text=Pudim+de+Chocotone" alt="Imagem de um pudim de chocotone" class="w-full h-48 object-cover">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-bold font-display text-stone-900 mb-2">Pudim de Chocotone</h3>
+                            <p class="text-stone-700 mb-4 text-sm leading-relaxed">A magia do Natal em forma de pudim. Cremoso e com pedaços de chocotone. (Edição Limitada)</p>
+                            <span class="text-lg font-bold text-amber-900">R$ 55,00</span>
+                        </div>
+                    </div>
+                    <!-- Pudim Card -->
+                    <div class="bg-stone-50 rounded-lg border border-stone-200 overflow-hidden">
+                        <img src="https://placehold.co/600x400/8bc34a/4a2c2a?text=Pudim+de+Pistache" alt="Imagem de um pudim de pistache" class="w-full h-48 object-cover">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-bold font-display text-stone-900 mb-2">Pudim de Pistache</h3>
+                            <p class="text-stone-700 mb-4 text-sm leading-relaxed">Uma criação sofisticada, feita com pasta de pistache pura. Sabor intenso e marcante.</p>
+                            <span class="text-lg font-bold text-amber-900">R$ 65,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Nossa História -->
+        <section id="historia" class="py-16 md:py-24 bg-stone-100">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x700/e0e0e0/333333?text=Mariana+Werneck" alt="Foto de Mariana Werneck" class="rounded-lg w-full">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold font-display text-stone-900 mb-4">Feito com Alma e Afeto</h2>
+                    <p class="text-stone-700 leading-relaxed mb-4">
+                        Tudo começou na cozinha da minha avó. O cheiro de caramelo no ar e a expectativa de provar aquele pudim lisinho e perfeito se tornaram minhas melhores memórias. Hoje, eu recrio essa magia em cada pudim que preparo.
+                    </p>
+                    <p class="text-stone-700 leading-relaxed mb-6">
+                        Meu segredo não está só na receita, mas no carinho em cada etapa. Escolho os ingredientes um a um e garanto que cada pudim chegue até você com o mesmo sabor e afeto da minha infância.
+                    </p>
+                    <p class="font-display text-xl text-stone-800">- Mariana Werneck</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Depoimentos -->
+        <section id="depoimentos" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-display text-stone-900 mb-12">O que nossos clientes dizem</h2>
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <!-- Depoimento 1 -->
+                    <div class="bg-stone-50 p-6 rounded-lg border border-stone-200">
+                        <p class="text-stone-700 mb-3">"O melhor pudim que já comi na vida! Textura perfeita, doce na medida certa. Virou o preferido da família!"</p>
+                        <p class="font-semibold text-sm text-stone-800">- Joana S.</p>
+                    </div>
+                    <!-- Depoimento 2 -->
+                    <div class="bg-stone-50 p-6 rounded-lg border border-stone-200">
+                        <p class="text-stone-700 mb-3">"Atendimento impecável e o pudim é simplesmente divino. Encomendei para um aniversário e foi um sucesso absoluto."</p>
+                        <p class="font-semibold text-sm text-stone-800">- Carlos M.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="bg-stone-900 text-white">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <h3 class="text-2xl font-bold font-display mb-4">Pronto para adoçar seu dia?</h3>
+            <p class="mb-8 max-w-lg mx-auto text-stone-300">Entre em contato pelo WhatsApp para fazer seu pedido ou tirar dúvidas.</p>
+            <a href="https://api.whatsapp.com/send?phone=35998556544&text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" class="bg-white text-stone-900 font-bold px-8 py-3 rounded-full hover:bg-stone-200 transition-colors inline-block">
+                Chamar no WhatsApp
+            </a>
+            <div class="mt-10 border-t border-stone-700 pt-6">
+                <p class="text-sm text-stone-400">Mariana Werneck Pudins | Entregas em Campo Belo - MG</p>
+                <p class="text-xs text-stone-500 mt-2">&copy; 2025. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
